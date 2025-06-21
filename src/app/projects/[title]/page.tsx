@@ -1,8 +1,13 @@
+
 import { getProjectBySlug } from "@/app/utills/getProjectBySlug"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import Link from "next/link"
 import { FaGithub } from "react-icons/fa"
+import { LinkButton } from "../_components/button"
+import { useGSAP } from "@gsap/react"
+import gsap from "gsap"
+import { UsedTechlogies } from "../_components/usedTechnogies"
 
 export default async function Clinic({ params }: { params: Promise<{ title: string }> }) {
 
@@ -10,11 +15,12 @@ export default async function Clinic({ params }: { params: Promise<{ title: stri
 
 
     const detailProjects = getProjectBySlug(title)
-
+    
     if (!detailProjects) {
         return
     }
 
+   
 
     return (
         <>
@@ -29,12 +35,7 @@ export default async function Clinic({ params }: { params: Promise<{ title: stri
                 <Image width={600} height={600} src={detailProjects.image} alt="Imagem do projeto" />
 
                 <div className="flex flex-col">
-                    <h2 className="text-2xl text-center mb-2 md:text-3xl">Teclogias utilizada:</h2>
-                    <div className="flex gap-2">
-                        {detailProjects.technologies.map((item, index) => (
-                            <p key={index} className="mx-2">{item}</p>
-                        ))}
-                    </div>
+                    <UsedTechlogies technologies={detailProjects.technologies}/>
                 </div>
 
 
@@ -44,29 +45,15 @@ export default async function Clinic({ params }: { params: Promise<{ title: stri
                 </div>
 
 
-                <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
-                    <Link className="w-56 h-24" href={""}>
-                        <Button className="w-56 h-12">
-                            Vercel
-                            <FaGithub />
-                        </Button>
-                    </Link>
+                <div id="teste" className="grid grid-cols-2 gap-6 md:grid-cols-3">
+                    <LinkButton href="/" text="GitHub" icon={<FaGithub />} />
 
-                   <Link className="w-56" href={""}>
-                        <Button className="w-56">
-                            Repositorio
-                            <FaGithub />
-                        </Button>
-                    </Link>
+                    <LinkButton href="/" text="Vercel" icon={<FaGithub />} />
+
+                    <LinkButton href="/" text="Video detalhado" icon={<FaGithub />} />
 
 
 
-                   <Link className="w-56" href={""}>
-                        <Button className="w-56">
-                            Video Detalhado {detailProjects.title}
-                            <FaGithub />
-                        </Button>
-                    </Link>
                 </div>
             </div>
 
