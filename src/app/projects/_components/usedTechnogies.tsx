@@ -34,7 +34,7 @@ export function UsedTechlogies({ technologies }: TechnologiesProps) {
 
     return (
         <>
-            <h2 id="text" className="text-2xl text-center mb-2 md:text-3xl opacity-0 -translate-y-10">Teclogias utilizada:</h2>
+            <h2 id="text" className="text-2xl text-center mb-2 md:text-3xl opacity-0 -translate-y-10 font-modern-negra">Tecnologias utilizadas:</h2>
             <div className="flex gap-2">
                 {technologies.map((item, index) => (
                     <p id="tech" key={index} className="mx-2">{item}</p>

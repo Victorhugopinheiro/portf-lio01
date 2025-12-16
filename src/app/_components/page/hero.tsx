@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import myImage from "../../../../public/image.jpg"
+import minhaFoto from "../../../../public/Minha foto.png"
 import { motion } from "framer-motion"
 
 export function Hero() {
@@ -15,9 +16,7 @@ export function Hero() {
 
 
                     className="relative my-6">
-                    <Image width={300} height={300} className="rounded-full cursor-pointer shadow-xl shadow-indigo-900 transition-all duration-300
-                     hover:-translate-y-5 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-600
-                    " alt="Imagem de paresentação" src={myImage} />
+                    
                 </motion.div>
 
                 <motion.div

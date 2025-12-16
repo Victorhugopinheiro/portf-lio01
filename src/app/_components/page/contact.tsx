@@ -47,9 +47,7 @@ export function Contact() {
                 </h1>
 
                 <p className="text-center max-w-[400px] font-semibold text-lg text-gray-500">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Non doloremque id, ut iusto sint, cum, molestias repellat voluptatibus veritatis
-                    cumque assumenda distinctio placeat facilis nisi itaque vero quod! Neque, est.
+                    Estou aberto a novas oportunidades e projetos. Sinta-se à vontade para entrar em contato comigo através do formulário abaixo ou enviar um e-mail diretamente.
                 </p>
 
                 <Link
