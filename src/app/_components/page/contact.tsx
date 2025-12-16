@@ -50,14 +50,7 @@ export function Contact() {
                     Estou aberto a novas oportunidades e projetos. Sinta-se à vontade para entrar em contato comigo através do formulário abaixo ou enviar um e-mail diretamente.
                 </p>
 
-                <Link
-                    className="text-nowrap rounded-md border border-blue-600 bg-black 
-                    px-5 py-3 text-lg font-bold text-white shadow-lg shadow-blue-700 transition-all 
-                    duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-600"
-                    href={"mailto:azullvictorhugo10@gmail.com"}
-                >
-                    Enviar E-mail
-                </Link>
+               
             </div>
 
             <Form {...form}>
